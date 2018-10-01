@@ -9,7 +9,7 @@ import { Observable, observable } from 'rxjs';
 export class AuthenticationService {
   constructor(private http: HttpClient) { }
 
-  login(username: string, password: string) {
+  login(username: string, password: string): Observable<Object> {
     const user = {
       id: 'ID',
       username: 'DAGRA',
@@ -19,7 +19,8 @@ export class AuthenticationService {
     };
     return Observable.create(observer => {
       localStorage.setItem('currentUser', JSON.stringify(user));
-      return user;
+      observer.next(user);
+      observer.complete();
     });
 
     // return this.http.post<any>(`${config.apiUrl}/users/authenticate`, { username: username, password: password })
