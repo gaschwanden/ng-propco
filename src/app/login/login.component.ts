@@ -22,7 +22,7 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {
     this.loginForm = this.formBuilder.group({
-      username: ['', Validators.required],
+      email: ['', Validators.required],
       password: ['', Validators.required]
     });
 
@@ -34,7 +34,7 @@ export class LoginComponent implements OnInit {
   }
 
   // convenience getter for easy access to form fields
-  get f() { return this.loginForm.controls; }
+  get formControls() { return this.loginForm.controls; }
 
   onSubmit() {
     this.submitted = true;
@@ -45,9 +45,9 @@ export class LoginComponent implements OnInit {
     }
 
     this.loading = true;
-    this.authenticationService.login(this.f.username.value, this.f.password.value)
+    this.authenticationService.login(this.formControls.email.value, this.formControls.password.value)
       .subscribe(
-        user => {
+        email => {
           this.router.navigate([this.returnUrl]);
         },
         error => {
