@@ -28,7 +28,7 @@ export class Web3Service {
   }
 
   constructor() {
-    this.checkAndInstantiateWeb3();
+    // this.checkAndInstantiateWeb3();
   }
 
   currentProvider() {

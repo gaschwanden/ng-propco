@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { AlertComponent } from './_directives/alert/alert.component';
-import { HomeComponent } from './home/home.component';
+import { ReitComponent } from './reit/reit.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { AuthGuard } from './_guard/auth.guard';
@@ -15,15 +15,21 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { Routing } from './app.routing';
 import { Web3Service } from './_services/_web3/web3.service';
 import { EthAddressValidatorDirective } from './_validators/eth-address-validator.directive';
+import { AddReitComponent } from './add-reit/add-reit.component';
+import { AssetComponent } from './asset/asset.component';
+import { AddAssetComponent } from './add-asset/add-asset.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AlertComponent,
-    HomeComponent,
+    ReitComponent,
     LoginComponent,
     RegisterComponent,
-    EthAddressValidatorDirective
+    EthAddressValidatorDirective,
+    AddReitComponent,
+    AssetComponent,
+    AddAssetComponent
   ],
   imports: [
     BrowserModule,

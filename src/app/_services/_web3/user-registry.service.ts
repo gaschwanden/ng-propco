@@ -12,7 +12,7 @@ export class UserRegistryService {
   USER_REGISTRY = TruffleContract(UserRegistry);
 
   constructor(private web3Svc: Web3Service) {
-    this.USER_REGISTRY.setProvider(this.web3Svc.currentProvider());
+    // this.USER_REGISTRY.setProvider(this.web3Svc.currentProvider());
   }
 
   userRegistry() {
