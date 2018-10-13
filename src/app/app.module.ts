@@ -3,9 +3,9 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { AlertComponent } from './_directives/alert/alert.component';
-import { ReitComponent } from './reit/reit.component';
-import { LoginComponent } from './login/login.component';
-import { RegisterComponent } from './register/register.component';
+import { ReitComponent } from './app-reit/reit.component';
+import { LoginComponent } from './app-login/login.component';
+import { RegisterComponent } from './app-register/register.component';
 import { AuthGuard } from './_guard/auth.guard';
 import { AlertService } from './_services/alert.service';
 import { AuthenticationService } from './_services/authentication.service';
@@ -15,9 +15,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { Routing } from './app.routing';
 import { Web3Service } from './_services/_web3/web3.service';
 import { EthAddressValidatorDirective } from './_validators/eth-address-validator.directive';
-import { AddReitComponent } from './add-reit/add-reit.component';
-import { AssetComponent } from './asset/asset.component';
-import { AddAssetComponent } from './add-asset/add-asset.component';
+import { AddReitComponent } from './app-add-reit/add-reit.component';
+import { AssetComponent } from './app-asset/asset.component';
+import { AddAssetComponent } from './app-add-asset/add-asset.component';
 
 @NgModule({
   declarations: [

@@ -1,15 +1,15 @@
 import { Routes, RouterModule } from '@angular/router';
 
-import { ReitComponent } from './reit/reit.component';
-import { LoginComponent } from './login/login.component';
-import { RegisterComponent } from './register/register.component';
+import { ReitComponent } from './app-reit/reit.component';
+import { LoginComponent } from './app-login/login.component';
+import { RegisterComponent } from './app-register/register.component';
 import { AuthGuard } from './_guard/auth.guard';
-import { AddReitComponent } from './add-reit/add-reit.component';
-import { AssetComponent } from './asset/asset.component';
-import { AddAssetComponent } from './add-asset/add-asset.component';
+import { AddReitComponent } from './app-add-reit/add-reit.component';
+import { AssetComponent } from './app-asset/asset.component';
+import { AddAssetComponent } from './app-add-asset/add-asset.component';
 
 const appRoutes: Routes = [
-    { path: '',   redirectTo: '/reit/all', pathMatch: 'full' },
+    { path: '', redirectTo: '/reit/all', pathMatch: 'full' },
 
     { path: 'login', component: LoginComponent },
     { path: 'register', component: RegisterComponent },
