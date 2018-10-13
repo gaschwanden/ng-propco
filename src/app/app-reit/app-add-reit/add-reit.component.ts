@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { FormGroup, FormControl, FormBuilder, Validators, FormArray } from '@angular/forms';
-import { Reit } from '../_models/reit.model';
+import { Reit } from '../../_models/reit.model';
 
 @Component({
   selector: 'app-add-reit',

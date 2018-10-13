@@ -4,9 +4,9 @@ import { ReitComponent } from './app-reit/reit.component';
 import { LoginComponent } from './app-login/login.component';
 import { RegisterComponent } from './app-register/register.component';
 import { AuthGuard } from './_guard/auth.guard';
-import { AddReitComponent } from './app-add-reit/add-reit.component';
+import { AddReitComponent } from './app-reit/app-add-reit/add-reit.component';
 import { AssetComponent } from './app-asset/asset.component';
-import { AddAssetComponent } from './app-add-asset/add-asset.component';
+import { AddAssetComponent } from './app-asset/app-add-asset/add-asset.component';
 
 const appRoutes: Routes = [
     { path: '', redirectTo: '/reit/all', pathMatch: 'full' },
