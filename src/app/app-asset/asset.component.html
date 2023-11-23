@@ -1,0 +1,39 @@
+<!-- <ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '14px' }"></ngx-loading> -->
+<div class="row">
+  <div class="col-4">
+    <div class="card mb-3">
+      <div class="card-header">
+        <h5 class="card-title">Add Asset</h5>
+      </div>
+      <div class="card-body">
+        <p class="card-text">
+          Click the Add button to add a new Asset.
+        </p>
+      </div>
+      <div class="card-footer">
+        <a class="btn btn-primary" href="/reit/add" role="button">Add</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-4" *ngFor="let reit of reits">
+    <div class="card mb-3">
+      <div class="card-header">
+        <h5 class="card-title">HEADER</h5>
+      </div>
+      <div class="card-body">
+        <p class="card-text">
+          Revenue: {{reit.revenue}}
+        </p>
+        <p class="card-text">
+          Expense: {{reit.expense}}
+        </p>
+      </div>
+      <div class="card-footer btn-toolbar" *ngIf="!reit.isVerified">
+        <div class="btn-grp" role="group">
+          <button type="button" class="btn btn-danger" (click)="onRemoveReit(reit.address)">Remove</button>
+          <button type="button" class="btn btn-info" (click)="onTransferReit(reit.address)">Transfer</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
